@@ -1,0 +1,22 @@
+package LeetCode;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+public class matrix_sum_bottom_right_corner {
+	public static void main(String args[]) throws IOException{
+		BufferedReader bi=new BufferedReader(new InputStreamReader(System.in));
+		String[] s1=bi.readLine().split(" ");
+		int a=Integer.parseInt(s1[0]),b=Integer.parseInt(s1[1]);
+		int	temp1=a/2,temp2=b/2,sum1=0;
+		for(int i=0;i<a;i++) {
+			String[] sk=bi.readLine().split(" ");
+			for(int j=0;j<b;j++) {
+				if(i>=temp1 && j>=temp2) {
+					sum1+=Integer.parseInt(sk[j]);
+				}
+			}
+		}
+		System.out.println(sum1);
+	}
+
+}
